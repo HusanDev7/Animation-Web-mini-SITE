@@ -1,0 +1,129 @@
+@import url(../css/fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Roboto';
+    cursor: none;
+    color: #fff;
+}
+
+/* background video */
+
+.bg {
+    position: fixed;
+    object-position: center;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: solid #28e98c;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section .scroll {
+    width: 100%;
+    display: flex;
+}
+
+section .scroll div {
+    color: #000;
+    font-size: 4em;
+    background: #fff;
+    white-space: nowrap;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
+}
+
+section .scroll div:nth-child(2) {
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+section .scroll div span {
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(-200%);
+    }
+}
+
+section .scroll.text1 {
+    transform: rotate(30deg) translateY(200px) translateX(-200px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+}
+
+
+section .scroll.text2 {
+    transform: rotate(-25deg) translateY(120px) translateX(-200px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+}
+
+section .scroll.text3 {
+    transform: rotate(25deg) translateY(300px) translateX(-200px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+}
+
+
+section .scroll.text4 {
+    transform: rotate(-2deg) translateY(-150px) translateX(-200px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+}
+
+
+section .scroll.text5 {
+    transform: rotate(5deg) translateY(250px) translateX(-200px);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+}
